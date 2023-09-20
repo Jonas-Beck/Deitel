@@ -19,13 +19,23 @@
             int year = Convert.ToInt32(Console.ReadLine());
 
             Console.Write("Height in inches: ");
-            int height = Convert.ToInt32(Console.ReadLine());
+            double height = Convert.ToDouble(Console.ReadLine());
             Console.Write("Weight in Pounds: ");
-            int weight = Convert.ToInt32(Console.ReadLine());
+            double weight = Convert.ToDouble(Console.ReadLine());
 
             HealthProfile profile = new HealthProfile(firstName, lastName, gender, month, day, year, height, weight);
+            Console.WriteLine($"Firstname: {profile.FirstName}");
+            Console.WriteLine($"Lastname: {profile.LastName}");
+            Console.WriteLine($"Gender: {profile.Gender}");
+            Console.WriteLine($"Birthdate: {profile.DayOfBirth}-{profile.MonthOfBirth}-{profile.YearOfBirth}");
+            Console.WriteLine($"Height: {profile.Height}");
+            Console.WriteLine($"Weight: {profile.Weight}");
 
-            Console.WriteLine(profile.AgeInYears());
+            Console.WriteLine($"Age in Years: {profile.AgeInYears()}");
+            Console.WriteLine($"BMI: {profile.BMI()}");
+            Console.WriteLine($"Maximum heart rate: {profile.MaxHeartRate()}");
+            Console.WriteLine($"Target heart rate: {profile.TargetHeartRate()}");
+
 
 
         }

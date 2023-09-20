@@ -9,11 +9,11 @@
         public int DayOfBirth { get; set; }
         public int YearOfBirth { get; set; }
         // Height in inches
-        public int Height { get; set; }
+        public double Height { get; set; }
         // Weight in Pounds
-        public int Weight { get; set; }
+        public double Weight { get; set; }
 
-        public HealthProfile(string firstName, string lastName, string gender, int monthOfBirth, int dayOfBirth, int yearOfBirth, int height, int weight)
+        public HealthProfile(string firstName, string lastName, string gender, int monthOfBirth, int dayOfBirth, int yearOfBirth, double height, double weight)
         {
             FirstName = firstName;
             LastName = lastName;
@@ -36,16 +36,15 @@
         }
         public int MaxHeartRate()
         {
-            return 1;
+            return 220 - AgeInYears();
         }
-        public int TargetHeartRate()
+        public string TargetHeartRate()
         {
-            return 1;
+            return $"{MaxHeartRate() * 0.5}-{(MaxHeartRate() * 0.85).ToString("#.")}";
         }
         public double BMI()
         {
-            return 1;
-
+            return (Weight / (Height * Height)) * 703;
         }
 
     }
