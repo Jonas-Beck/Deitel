@@ -4,9 +4,9 @@
     {
         static void Main(string[] args)
         {
-            Date date1 = new Date(2, 1, 2023);
+            Date date1 = new Date(12, 10, 2023);
             Console.WriteLine(date1.ToString());
-            for (int i = 0; i < 50; i++)
+            for (int i = 0; i < 60; i++)
             {
                 date1.NextDay();
                 Console.WriteLine(date1.ToString());
