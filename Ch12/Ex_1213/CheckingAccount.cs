@@ -20,7 +20,6 @@
                 feeAmount = value;
             }
         }
-
         public override bool Credit(decimal balance)
         {
             if (balance - FeeAmount < 0)
@@ -29,7 +28,6 @@
             }
             return base.Credit(balance - FeeAmount);
         }
-
         public override bool Debit(decimal balance)
         {
             return base.Debit(balance + FeeAmount);
