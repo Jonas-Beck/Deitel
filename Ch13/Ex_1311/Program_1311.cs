@@ -1,6 +1,6 @@
 ﻿namespace Ex_1311
 {
-    internal class Program
+    internal class Program_1311
     {
         static void Main(string[] args)
         {

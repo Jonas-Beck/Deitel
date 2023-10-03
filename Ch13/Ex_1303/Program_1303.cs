@@ -1,11 +1,11 @@
 ﻿namespace Ex_1303
 {
-    internal class Program
+    internal class Program_1303
     {
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Hello, World!");
+
         }
     }
 }
