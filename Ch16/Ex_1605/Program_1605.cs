@@ -6,23 +6,23 @@
         {
             Console.Write("Write English Word Sentence:");
             string answer = Console.ReadLine();
-            string PigString = "";
+            string pigString = "";
 
             foreach (var word in answer.Split(" "))
             {
-                PigString += GetPigLatin(word) + " ";
+                pigString += getPigLatin(word) + " ";
             }
             Console.WriteLine("Translated to Pig Lating:");
-            Console.WriteLine(PigString);
+            Console.WriteLine(pigString);
         }
 
-        public static string GetPigLatin(string EnglishString)
+        public static string getPigLatin(string englishString)
         {
-            if (EnglishString.Length == 0) { return EnglishString; }
+            if (englishString.Length == 0) { return englishString; }
 
-            string PigString = EnglishString.Substring(1);
-            PigString += EnglishString[0] + "ay";
-            return PigString;
+            string pigString = englishString.Substring(1);
+            pigString += englishString[0] + "ay";
+            return pigString;
         }
     }
 }
