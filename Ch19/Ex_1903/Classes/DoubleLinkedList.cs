@@ -18,8 +18,20 @@
 
         public void Insert(object referenceNode, object insertItem)
         {
-            // Get reference node from method FindReferenceNode() 
-            ListNode node = FindReferenceNode(referenceNode);
+            ListNode node = null;
+            try
+            {
+                // Get reference node from method FindReferenceNode() 
+                node = FindReferenceNode(referenceNode);
+            }
+            catch (EmptyListException emptyListException)
+            {
+                throw new InvalidOperationException("DoubleLinkedList can't be empty", emptyListException);
+            }
+            catch (ArgumentException argumentException)
+            {
+                throw new InvalidOperationException(argumentException.Message, argumentException);
+            }
 
             // Insert insertItem before referencenode
             ListNode previous = node.Previous;
@@ -38,8 +50,20 @@
         public void InsertAfter(Object referenceNode, object insertItem)
         {
 
-            // Get reference node from method FindReferenceNode() 
-            ListNode node = FindReferenceNode(referenceNode);
+            ListNode node = null;
+            try
+            {
+                // Get reference node from method FindReferenceNode() 
+                node = FindReferenceNode(referenceNode);
+            }
+            catch (EmptyListException emptyListException)
+            {
+                throw new InvalidOperationException("DoubleLinkedList can't be empty", emptyListException);
+            }
+            catch (ArgumentException argumentException)
+            {
+                throw new InvalidOperationException(argumentException.Message, argumentException);
+            }
 
             // Insert InsertItem after referencenode
             ListNode next = node.Next;
@@ -60,9 +84,20 @@
         public void Delete(Object referenceNode)
         {
 
-            // Get reference node from method FindReferenceNode() 
-            ListNode node = FindReferenceNode(referenceNode);
-
+            ListNode node = null;
+            try
+            {
+                // Get reference node from method FindReferenceNode() 
+                node = FindReferenceNode(referenceNode);
+            }
+            catch (EmptyListException emptyListException)
+            {
+                throw new InvalidOperationException("DoubleLinkedList can't be empty", emptyListException);
+            }
+            catch (ArgumentException argumentException)
+            {
+                throw new InvalidOperationException(argumentException.Message, argumentException);
+            }
 
             // IF reference is firstNode
             if (node == firstNode)
