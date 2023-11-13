@@ -11,7 +11,7 @@ namespace Ex_2308
     public partial class MainWindow : Window
     {
 
-        private const string KEY = "6bc03d4112343dff1e398d760f276199";
+        private const string KEY = "";
 
         private static HttpClient openWeatherClient = new HttpClient();
 
