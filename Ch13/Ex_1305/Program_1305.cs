@@ -6,29 +6,6 @@
         {
             bool continueLoop = true;
 
-            do
-            {
-                try
-                {
-                    Console.Write("Type int number: ");
-                    int number = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine(number);
-                    continueLoop = false;
-                }
-                catch (Exception)
-                {
-                    Console.WriteLine("Log error");
-                }
-                catch (FormatException)
-                {
-                    Console.WriteLine("Please type a valid int number");
-                }
-                catch (OverflowException)
-                {
-                    Console.WriteLine("That is not a int number");
-                }
-            } while (continueLoop);
-
             /*
             do
             {
@@ -39,6 +16,30 @@
                     Console.WriteLine(number);
                     continueLoop = false;
                 }
+                catch (Exception)
+                {
+                    Console.WriteLine("Log error");
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Please type a valid int number");
+                }
+                catch (OverflowException)
+                {
+                    Console.WriteLine("That is not a int number");
+                }
+            } while (continueLoop);
+            */
+
+            do
+            {
+                try
+                {
+                    Console.Write("Type int number: ");
+                    int number = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine(number);
+                    continueLoop = false;
+                }
                 catch (FormatException)
                 {
                     Console.WriteLine("Please type a valid int number");
@@ -52,8 +53,7 @@
                     Console.WriteLine("Log error");
                 }
             } while (continueLoop);
-             
-             */
+
         }
     }
 }
